@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    width: 100vw;
+}
+
+nav h1{
+    background-color: rgb(150, 216, 216);
+    color: rgb(12, 59, 95);
+    padding: 5px;
+    text-align: center;
+}
+
+.game{
+    /* background-color: yellow; */
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.boxContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.box{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 5vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(216, 234, 234);
+}
+
+.gameInfo{
+    text-align: center;
+}
+
+.gameInfo h2{
+    margin: 5vh;
+}
+
+.gameInfo h3{
+    margin: 5vh;
+}
+
+.gameInfo img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin: 0px auto;
+    margin-right: 4.5vw;
+}
+
+#resetButton{
+    display: block;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(150, 216, 216);
+    color: black;
+    font-size: min(2.5vh, 1vw);
+    width: 5vw;
+    height: 7vh;
+}
+
+#resetButton:hover{
+    cursor: pointer;
+    background-color: rgb(103, 188, 188);
+}
+
+.bt-0{
+   border-top: 0; 
+}
+.bb-0{
+    border-bottom: 0; 
+    
+}
+.br-0{    
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+
+@media screen and (max-width: 950px){
+    .game{
+        flex-flow: column wrap;
+    }
+
+    .boxContainer{
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    #resetButton{
+        width: 12vh;
+        height: 10vw;
+        font-size: large;
+    }
+
+}
+
+@media screen and (min-width: 950px){
+    .game{
+        justify-content: center;
+    }
+
+    .boxContainer{
+        display: grid;
+        grid-template-columns: repeat(3, 12vw);
+        grid-template-rows: repeat(3, 12vw);
+    }
+
+    .gameInfo{
+        text-align: center;
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #resetButton{
+        width: 8vw;
+        height: 6vh;
+        font-size: large;
+    }
+
+}
